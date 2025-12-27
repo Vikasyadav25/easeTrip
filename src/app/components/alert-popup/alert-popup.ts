@@ -22,7 +22,7 @@ export class AlertPopupComponent implements OnInit, OnDestroy {
 
   private countdownInterval?: number;
 
-  private targetDate = new Date("2025-09-20T23:59:59"); // Diwali target date
+  private targetDate = new Date("2026-03-30T23:59:59"); // Diwali target date
 
   ngOnInit() {
     this.startCountdown();

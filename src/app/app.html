@@ -1,14 +1,17 @@
 <div class="min-h-screen bg-gray-50">
-  <!-- Navigation -->
-  <app-navbar></app-navbar>
 
-  <!-- Main content area -->
+  <!-- Navbar -->
+  <app-navbar *ngIf="!hideLayout"></app-navbar>
+
+  <!-- Main Content -->
   <main>
     <router-outlet></router-outlet>
   </main>
-<!-- Partner -->
-  <app-partners-marquee></app-partners-marquee>
-  <!-- Footer -->
-  <app-footer></app-footer>
-</div>
 
+  <!-- Partners -->
+  <app-partners-marquee *ngIf="!hideLayout"></app-partners-marquee>
+
+  <!-- Footer -->
+  <app-footer *ngIf="!hideLayout"></app-footer>
+
+</div>

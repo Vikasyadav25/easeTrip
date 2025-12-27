@@ -5,6 +5,8 @@ import { TripDetailComponent } from './pages/trip-detail/trip-detail';
 import { AboutComponent } from './pages/about/about';
 import { ContactComponent } from './pages/contact/contact';
 import { BlogComponent } from './pages/blog/blog';
+import { PrivacyPolicy } from './privacy-policy/privacy-policy';
+import { Terms } from './terms/terms';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +16,7 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'blog', component: BlogComponent },
-  { path: '**', redirectTo: '/home' } // Wildcard route for 404 page
+  { path: 'privacy-policy', component: PrivacyPolicy, data: { hideLayout: true } },
+  { path: 'terms', component: Terms, data: { hideLayout: true } },
+  { path: '**', redirectTo: '/home' }
 ];
-
